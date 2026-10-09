@@ -1,0 +1,4 @@
+*.md
+supabase.sql
+dev-server.mjs
+.claude
