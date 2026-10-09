@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>채움데일리 · 레시피에서 제품까지, 곁에서 함께</title>
+  <meta name="description" content="처음이라 막막한 제품화, 첫 배합부터 출시까지 한 단계씩 같이 가요. 레시피 제품화 · 1회 자문 · 월 자문." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="brand" data-text="name"></p>
+      <p class="eyebrow" data-text="role"></p>
+      <h1 data-text="headline"></h1>
+      <p class="intro" data-text="intro"></p>
+      <a class="btn btn-primary" href="#contact">연락하기</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="cases">
+      <div class="wrap">
+        <h2>이렇게 만들었어요</h2>
+        <div class="cards" id="case-list"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="services">
+      <div class="wrap">
+        <h2>할 수 있는 일</h2>
+        <div class="services" id="service-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <h2>편하게 연락 주세요</h2>
+        <p class="lead">어떤 제품을 만들고 싶은지 한 줄만 알려주셔도 괜찮아요.</p>
+        <div class="contact-buttons">
+          <a class="btn btn-kakao" id="btn-kakao" target="_blank" rel="noopener">카카오톡으로 연락하기</a>
+          <a class="btn btn-outline" id="btn-email">이메일 보내기</a>
+        </div>
+
+        <form id="inquiry-form" class="form" novalidate>
+          <h3>문의 남기기</h3>
+          <label>
+            <span>이름 또는 상호</span>
+            <input name="name" type="text" maxlength="100" required placeholder="예: 오늘반찬 김사장" />
+          </label>
+          <label>
+            <span>연락처</span>
+            <input name="contact" type="text" maxlength="200" required placeholder="이메일이나 전화번호" />
+          </label>
+          <label>
+            <span>원하는 서비스</span>
+            <select name="service" required>
+              <option value="">골라주세요</option>
+            </select>
+          </label>
+          <label>
+            <span>어떤 제품을 만들고 싶으세요?</span>
+            <textarea name="description" rows="4" maxlength="2000" required placeholder="예: 매장 깻잎장아찌를 병 제품으로 팔고 싶어요"></textarea>
+          </label>
+          <!-- 사람에게는 안 보이는 칸. 자동 스팸이 채우면 걸러냅니다 -->
+          <input name="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn-primary" type="submit">문의 보내기</button>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span data-text="name"></span></div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
