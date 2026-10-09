@@ -3,6 +3,7 @@
 
 window.SITE = {
   name: "채움데일리",
+  nameEn: "CHAEUM DAILY",
   role: "식품 제품 개발 · 자문",
   headline: "레시피에서 제품까지,\n곁에서 함께",
   intro: "처음이라 막막한 제품화, 첫 배합부터 출시까지 한 단계씩 같이 가요.",
