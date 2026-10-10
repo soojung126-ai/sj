@@ -2,8 +2,8 @@
 // 글자를 바꾸고 싶으면 이 파일만 고치면 됩니다. (나중에 어드민이 이 내용을 대신하게 됩니다)
 
 window.SITE = {
-  name: "채움데일리",
-  nameEn: "CHAEUM DAILY",
+  name: "현푸드랩",
+  nameEn: "HYUN FOOD LAB",
   role: "식품 제품 개발 · 자문",
   headline: "레시피에서 제품까지,\n곁에서 함께",
   intro: "처음이라 막막한 제품화, 첫 배합부터 출시까지 한 단계씩 같이 가요.",

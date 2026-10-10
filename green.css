@@ -98,7 +98,7 @@ a { color: inherit; }
 .wordmark {
   position: relative;
   z-index: 1;
-  margin: 24px 0 72px;
+  margin: 24px 0 120px;
   font-family: var(--display);
   font-weight: 900;
   font-size: clamp(56px, 13vw, 168px);
