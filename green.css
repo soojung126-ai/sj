@@ -9,7 +9,6 @@
   --ok: #1f7a45;
   --error: #b3261e;
   --display: "SUITE", sans-serif;
-  --display-en: "Anton", "SUITE", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -43,9 +42,10 @@ a { color: inherit; }
   backdrop-filter: blur(8px);
 }
 .nav-brand {
-  font-family: var(--display-en);
-  font-size: 20px;
-  letter-spacing: 0.02em;
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.01em;
   text-decoration: none;
 }
 .nav-pill {
@@ -137,9 +137,10 @@ a { color: inherit; }
   color: var(--panel);
 }
 .sticker-label {
-  font-family: var(--display-en);
-  font-size: 15px;
-  letter-spacing: 0.08em;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.14em;
   opacity: 0.85;
 }
 .sticker-big {
@@ -208,9 +209,10 @@ a { color: inherit; }
 .section + .section { border-top: 1px solid var(--line); }
 .kicker {
   margin: 0 0 8px;
-  font-family: var(--display-en);
-  font-size: 16px;
-  letter-spacing: 0.12em;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.16em;
   color: var(--ink-soft);
 }
 h2 {
@@ -384,8 +386,8 @@ h2 {
   color: var(--ink-soft);
 }
 .footer-en {
-  font-family: var(--display-en);
-  letter-spacing: 0.06em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 /* 휴대폰 */
