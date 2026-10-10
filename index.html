@@ -21,19 +21,70 @@
   </nav>
 
   <header class="hero" id="top">
-    <div class="sticker sticker-a" aria-hidden="true">
-      <span class="sticker-label">STEP 01</span>
-      <span class="sticker-big">레시피</span>
-      <span class="sticker-small">매장의 그 맛 그대로</span>
+    <p class="hero-tag"><span data-text="nameEn"></span><span class="hero-tag-sub"> — FOOD PRODUCT DEVELOPMENT &amp; CONSULTING</span></p>
+
+    <div class="wordmark-row">
+      <h1 class="wordmark" data-text="name"></h1>
+      <!-- 설계도 느낌의 병 도면 (장식) -->
+      <svg class="blueprint" viewBox="0 0 260 210" aria-hidden="true">
+        <defs>
+          <pattern id="bp-grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M10 0H0V10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.22" />
+          </pattern>
+          <marker id="bp-arrow" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M0 0L6 3L0 6z" fill="currentColor" />
+          </marker>
+        </defs>
+        <rect x="1" y="1" width="258" height="208" rx="16" fill="url(#bp-grid)" stroke="currentColor" stroke-dasharray="4 3" />
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="96" y="40" width="58" height="16" rx="3" />
+          <path d="M102 56v4c-12 2-20 8-20 18v82c0 7 5 12 12 12h62c7 0 12-5 12-12V78c0-10-8-16-20-18v-4" />
+          <rect x="82" y="96" width="86" height="42" stroke-dasharray="3 3" />
+        </g>
+        <g stroke="currentColor" stroke-width="0.8" opacity="0.7">
+          <line x1="125" y1="30" x2="125" y2="182" stroke-dasharray="8 3 2 3" />
+          <line x1="82" y1="28" x2="82" y2="74" />
+          <line x1="168" y1="28" x2="168" y2="74" />
+          <line x1="158" y1="40" x2="196" y2="40" />
+          <line x1="174" y1="172" x2="196" y2="172" />
+        </g>
+        <g stroke="currentColor" stroke-width="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)">
+          <line x1="86" y1="30" x2="164" y2="30" />
+          <line x1="192" y1="44" x2="192" y2="168" />
+        </g>
+        <g stroke="currentColor" stroke-width="0.8" fill="none">
+          <path d="M90 117H58l-6 -6" />
+          <path d="M100 47H58l-6 6" />
+        </g>
+        <g fill="currentColor" font-size="10" font-weight="800" letter-spacing="0.06em">
+          <text x="125" y="23" text-anchor="middle">Ø 86</text>
+          <text x="200" y="110">H 132</text>
+          <text x="14" y="113">라벨</text>
+          <text x="14" y="58">뚜껑</text>
+        </g>
+        <g fill="none" stroke="currentColor" stroke-width="1">
+          <rect x="176" y="182" width="72" height="18" rx="3" />
+        </g>
+        <text x="212" y="194.5" fill="currentColor" font-size="8.5" font-weight="800" text-anchor="middle" letter-spacing="0.08em">HFL · 배합 설계</text>
+      </svg>
     </div>
 
-    <p class="hero-tag"><span data-text="nameEn"></span><span class="hero-tag-sub"> — FOOD PRODUCT DEVELOPMENT &amp; CONSULTING</span></p>
-    <h1 class="wordmark" data-text="name"></h1>
-
-    <div class="sticker sticker-b" aria-hidden="true">
-      <span class="sticker-label">STEP 03</span>
-      <span class="sticker-big">제품</span>
-      <span class="sticker-small">선반 위에 올라가기까지</span>
+    <div class="steps" aria-label="제품이 되는 과정">
+      <div class="sticker sticker-a">
+        <span class="sticker-label">STEP 01</span>
+        <span class="sticker-big">레시피</span>
+        <span class="sticker-small">매장의 그 맛 그대로</span>
+      </div>
+      <div class="sticker sticker-c">
+        <span class="sticker-label">STEP 02</span>
+        <span class="sticker-big">배합 설계</span>
+        <span class="sticker-small">계량하고 표준화해 시제품까지</span>
+      </div>
+      <div class="sticker sticker-b">
+        <span class="sticker-label">STEP 03</span>
+        <span class="sticker-big">제품</span>
+        <span class="sticker-small">선반 위에 올라가기까지</span>
+      </div>
     </div>
 
     <div class="hero-bottom">

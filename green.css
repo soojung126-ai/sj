@@ -95,44 +95,70 @@ a { color: inherit; }
   text-align: center;
   color: var(--ink-soft);
 }
+.wordmark-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 3vw, 40px);
+  margin: 28px 0 48px;
+}
 .wordmark {
-  position: relative;
-  z-index: 1;
-  margin: 24px 0 120px;
+  margin: 0;
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(56px, 13vw, 168px);
+  font-size: clamp(56px, 12vw, 156px);
   line-height: 0.95;
   letter-spacing: -0.02em;
-  text-align: center;
   color: var(--ink);
 }
+.blueprint {
+  flex-shrink: 0;
+  width: clamp(150px, 20vw, 260px);
+  height: auto;
+  color: var(--ink);
+  font-family: var(--display);
+  transform: rotate(3deg);
+}
 
-/* 기울어진 카드 */
+/* 제품이 되는 과정 — 기울어진 카드 세 장 */
+.steps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 56px;
+}
 .sticker {
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: clamp(130px, 15vw, 190px);
+  width: clamp(150px, 16vw, 200px);
   aspect-ratio: 4 / 5;
+  margin: 0 -10px;
   padding: 18px;
   border-radius: 22px;
   box-shadow: 0 18px 40px rgba(14, 74, 45, 0.18);
+  transition: transform 0.2s ease;
 }
+.sticker:hover { z-index: 3; }
 .sticker-a {
-  top: 130px;
-  left: 9%;
-  z-index: 0;
-  transform: rotate(-10deg);
+  z-index: 1;
+  transform: rotate(-8deg) translateY(10px);
   background: #f3c9a4;
   color: var(--ink);
 }
-.sticker-b {
-  top: clamp(150px, 13vw, 175px);
-  right: -6px;
+.sticker-c {
   z-index: 2;
-  transform: rotate(7deg);
+  transform: rotate(2deg) translateY(-6px);
+  background-color: var(--card);
+  background-image:
+    linear-gradient(rgba(14, 74, 45, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 74, 45, 0.1) 1px, transparent 1px);
+  background-size: 12px 12px;
+  border: 1.5px dashed rgba(14, 74, 45, 0.45);
+  color: var(--ink);
+}
+.sticker-b {
+  z-index: 1;
+  transform: rotate(8deg) translateY(12px);
   background: var(--ink);
   color: var(--panel);
 }
@@ -146,8 +172,8 @@ a { color: inherit; }
 .sticker-big {
   font-family: var(--display);
   font-weight: 900;
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05;
 }
 .sticker-small {
   font-size: 13px;
@@ -394,21 +420,16 @@ h2 {
 @media (max-width: 760px) {
   .nav { padding: 12px 16px; }
   .nav-pill { display: none; }
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 12px;
-    padding: 32px 16px 48px;
-  }
-  .hero-tag { order: 1; width: 100%; }
+  .hero { padding: 28px 16px 48px; }
   .hero-tag-sub { display: none; }
-  .wordmark { order: 2; width: 100%; margin: 12px 0 28px; font-size: 60px; }
-  .sticker { position: static; order: 3; width: 140px; padding: 14px; border-radius: 18px; margin-bottom: 40px; }
-  .sticker-a { transform: rotate(-6deg); }
-  .sticker-b { transform: rotate(5deg); }
+  .wordmark-row { flex-direction: column; gap: 12px; margin: 16px 0 36px; }
+  .wordmark { font-size: 64px; }
+  .blueprint { width: 200px; }
+  .sticker { width: 108px; padding: 12px; border-radius: 16px; margin: 0 2px; }
+  .sticker-big { font-size: 20px; }
+  .sticker-label { font-size: 10px; }
   .sticker-small { display: none; }
-  .hero-bottom { order: 4; width: 100%; }
+  .steps { margin-bottom: 44px; }
   .hero-bottom { flex-direction: column; align-items: flex-start; gap: 20px; }
   .hero-meta { text-align: left; }
   .panel { padding: 8px 16px 0; border-radius: 28px 28px 0 0; }
