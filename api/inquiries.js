@@ -3,7 +3,7 @@
 // 이 두 값은 Supabase–Vercel 연동이 자동으로 넣어 줍니다. 서버 전용 키라 브라우저로 내보내지 않습니다.
 // 표는 RLS 로 잠겨 있어 브라우저에서는 아무것도 못 하고, 이 서버 코드만 넣을 수 있습니다.
 
-const SERVICES = ["레시피 제품화", "1회 자문", "월 자문", "잘 모르겠음"];
+const SERVICES = ["레시피 제품화", "1회 자문", "월 자문", "교육", "잘 모르겠음"];
 
 function clean(value, max) {
   return typeof value === "string" ? value.trim().slice(0, max) : "";

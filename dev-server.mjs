@@ -36,6 +36,7 @@ createServer(async (req, res) => {
   try {
     const body = await readFile(file);
     res.setHeader("Content-Type", types[extname(file)]);
+    res.setHeader("Cache-Control", "no-store");
     res.end(body);
   } catch {
     res.statusCode = 404;

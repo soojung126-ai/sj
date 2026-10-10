@@ -111,13 +111,42 @@ a { color: inherit; }
   letter-spacing: -0.02em;
   color: var(--ink);
 }
-.blueprint {
+.transform-art {
   flex-shrink: 0;
-  width: clamp(150px, 20vw, 260px);
+  width: clamp(220px, 30vw, 380px);
   height: auto;
+  overflow: visible;
   color: var(--ink);
   font-family: var(--display);
-  transform: rotate(3deg);
+}
+.art-label { font-size: 13px; font-weight: 800; fill: currentColor; }
+.art-wow { font-size: 22px; font-weight: 900; fill: currentColor; }
+.jar-small { font-size: 8px; font-weight: 800; fill: currentColor; }
+.jar-big { font-size: 12px; font-weight: 900; fill: currentColor; }
+
+/* 김이 올라가고, 반짝이고, 제품이 톡 튀어나와요 */
+.steam path { animation: steam 2.4s ease-in-out infinite; }
+.steam path:nth-child(2) { animation-delay: 0.4s; }
+.steam path:nth-child(3) { animation-delay: 0.8s; }
+.sparkle { transform-box: fill-box; transform-origin: center; animation: twinkle 1.8s ease-in-out infinite; }
+.sparkle.s2 { animation-delay: 0.5s; }
+.sparkle.s3 { animation-delay: 1s; }
+.product { transform-box: fill-box; transform-origin: center bottom; animation: pop 0.7s cubic-bezier(0.3, 1.6, 0.5, 1) 0.4s both; }
+
+@keyframes steam {
+  0%, 100% { transform: translateY(4px); opacity: 0.2; }
+  50% { transform: translateY(-4px); opacity: 0.7; }
+}
+@keyframes twinkle {
+  0%, 100% { transform: scale(0.7) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(20deg); }
+}
+@keyframes pop {
+  from { transform: scale(0.4); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .steam path, .sparkle, .product { animation: none; }
 }
 
 /* 제품이 되는 과정 — 기울어진 카드 세 장 */
@@ -132,7 +161,7 @@ a { color: inherit; }
   justify-content: space-between;
   width: clamp(150px, 16vw, 200px);
   aspect-ratio: 4 / 5;
-  margin: 0 -10px;
+  margin: 0 2px;
   padding: 18px;
   border-radius: 22px;
   box-shadow: 0 18px 40px rgba(14, 74, 45, 0.18);
@@ -250,6 +279,28 @@ h2 {
   letter-spacing: -0.01em;
 }
 
+/* 대상 품목 */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.category {
+  padding: 26px;
+  border-radius: 24px;
+  background: var(--card);
+}
+.category h3 {
+  margin: 0 0 8px;
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: 26px;
+}
+.category p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
 /* 사례 카드 */
 .cards {
   display: grid;
@@ -333,9 +384,27 @@ h2 {
 }
 .contact .kicker { color: var(--bg); }
 .lead {
-  margin: -20px 0 28px;
+  margin: 0 0 24px;
   color: var(--bg);
 }
+.concerns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -12px 0 28px;
+  padding: 0;
+  list-style: none;
+}
+.concerns li {
+  padding: 12px 18px;
+  border: 1px solid rgba(231, 236, 208, 0.25);
+  border-radius: 20px 20px 20px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+  font-weight: 700;
+}
+.concerns li::before { content: "“"; margin-right: 2px; opacity: 0.6; }
+.concerns li::after { content: "”"; margin-left: 2px; opacity: 0.6; }
 .btn {
   display: inline-flex;
   align-items: center;
@@ -424,7 +493,7 @@ h2 {
   .hero-tag-sub { display: none; }
   .wordmark-row { flex-direction: column; gap: 12px; margin: 16px 0 36px; }
   .wordmark { font-size: 64px; }
-  .blueprint { width: 200px; }
+  .transform-art { width: 300px; }
   .sticker { width: 108px; padding: 12px; border-radius: 16px; margin: 0 2px; }
   .sticker-big { font-size: 20px; }
   .sticker-label { font-size: 10px; }
@@ -434,6 +503,11 @@ h2 {
   .hero-meta { text-align: left; }
   .panel { padding: 8px 16px 0; border-radius: 28px 28px 0 0; }
   .section { padding: 56px 0; }
+  .categories { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .category { padding: 18px; border-radius: 18px; }
+  .category h3 { font-size: 20px; }
+  .category p { font-size: 14px; }
+  .concerns li { font-size: 15px; padding: 10px 14px; }
   .contact { padding: 44px 20px; border-radius: 24px; }
   .contact-buttons .btn { flex: 1 1 100%; }
   .form { padding: 20px; }

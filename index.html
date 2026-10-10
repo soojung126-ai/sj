@@ -3,119 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>현푸드랩 · 레시피에서 제품까지, 곁에서 함께</title>
-  <meta name="description" content="처음이라 막막한 제품화, 첫 배합부터 출시까지 한 단계씩 같이 가요. 레시피 제품화 · 1회 자문 · 월 자문." />
+  <title>현푸드랩 · 기획에서 출시까지, 식품 R&D 자문</title>
+  <meta name="description" content="식품 R&D 20년, 소스·HMR·냉동식품을 기획부터 양산까지. 신규 라인 셋업·양산 안정화, 품질 클레임 저감, 소스·HMR·저당 제품 상품화 자문과 교육." />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUITE@2.0.4/fonts/static/woff2/SUITE.css" />
-  <link rel="stylesheet" href="green.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" />
+  <link rel="stylesheet" href="warm.css" />
 </head>
 <body>
   <nav class="nav">
     <a class="nav-brand" href="#top">· <span data-text="nameEn"></span></a>
     <div class="nav-pill">
-      <a class="active" href="#top">홈</a>
-      <a href="#cases">사례</a>
-      <a href="#services">할 수 있는 일</a>
-      <a href="#contact">연락하기</a>
+      <a href="#areas">자문 분야</a>
+      <a href="#results" id="nav-results">성과</a>
+      <a href="#career">경력</a>
+      <a href="#notes" id="nav-notes">노트</a>
     </div>
     <a class="nav-cta" href="#contact">상담 문의</a>
   </nav>
 
   <header class="hero" id="top">
-    <p class="hero-tag"><span data-text="nameEn"></span><span class="hero-tag-sub"> — FOOD PRODUCT DEVELOPMENT &amp; CONSULTING</span></p>
+    <p class="hero-tag"><span data-text="nameEn"></span><span class="hero-tag-sub"> — FOOD R&amp;D CONSULTING</span></p>
 
     <div class="wordmark-row">
       <h1 class="wordmark" data-text="name"></h1>
-      <!-- 설계도 느낌의 병 도면 (장식) -->
-      <svg class="blueprint" viewBox="0 0 260 210" aria-hidden="true">
+      <!-- 비법 요리 → 실험실 레시피 → 공장 제품 손그림 (장식) -->
+      <svg class="transform-art" viewBox="-14 0 594 212" aria-hidden="true">
         <defs>
-          <pattern id="bp-grid" width="10" height="10" patternUnits="userSpaceOnUse">
-            <path d="M10 0H0V10" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.22" />
-          </pattern>
-          <marker id="bp-arrow" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-            <path d="M0 0L6 3L0 6z" fill="currentColor" />
-          </marker>
+          <!-- 선을 손으로 그린 것처럼 살짝 흔들리게 -->
+          <filter id="hand" x="-5%" y="-5%" width="110%" height="110%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.6" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="blob" x="-5%" y="-5%" width="110%" height="110%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
         </defs>
-        <rect x="1" y="1" width="258" height="208" rx="16" fill="url(#bp-grid)" stroke="currentColor" stroke-dasharray="4 3" />
-        <g fill="none" stroke="currentColor" stroke-width="1.6">
-          <rect x="96" y="40" width="58" height="16" rx="3" />
-          <path d="M102 56v4c-12 2-20 8-20 18v82c0 7 5 12 12 12h62c7 0 12-5 12-12V78c0-10-8-16-20-18v-4" />
-          <rect x="82" y="96" width="86" height="42" stroke-dasharray="3 3" />
+
+        <!-- 색 덩어리 (선과 일부러 살짝 어긋나게) -->
+        <g filter="url(#blob)">
+          <path d="M10 122C10 94 48 84 80 92c32 8 36 46 12 60-28 16-80 8-82-30z" fill="#f3c9a4" opacity="0.6" />
+          <path d="M23 110q36-9 72-1-34 11-72 1z" fill="#c2562f" opacity="0.45" />
+          <path d="M184 104c6-30 66-36 92-12 22 20 14 58-24 60-40 3-74-18-68-48z" fill="#cfd9b8" opacity="0.7" />
+          <path d="M206 118q20-7 40 0l8 18q3 10-8 10h-41q-10 0-7-9z" fill="#c2562f" opacity="0.45" />
+          <path d="M271 128h22v13q0 3-3 3h-17q-3 0-3-3z" fill="#e3b14b" opacity="0.7" />
+          <path d="M408 114c4-30 66-42 124-28 30 8 34 52 0 64-48 16-128 8-124-36z" fill="#f1dca6" opacity="0.7" />
         </g>
-        <g stroke="currentColor" stroke-width="0.8" opacity="0.7">
-          <line x1="125" y1="30" x2="125" y2="182" stroke-dasharray="8 3 2 3" />
-          <line x1="82" y1="28" x2="82" y2="74" />
-          <line x1="168" y1="28" x2="168" y2="74" />
-          <line x1="158" y1="40" x2="196" y2="40" />
-          <line x1="174" y1="172" x2="196" y2="172" />
+
+        <!-- 선 그림 -->
+        <g filter="url(#hand)" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- 1. 비법 요리: 국그릇 + 젓가락 + 김 -->
+          <path d="M40 88c-5-6 1-11 0-16s-5-9 0-14M57 84c-5-6 1-11 0-16s-5-9 0-14M74 88c-5-6 1-11 0-16s-5-9 0-14" stroke-width="1.6" opacity="0.6" />
+          <path d="M14 108c1 24 18 40 44 40s43-16 44-40" />
+          <path d="M14 108c4-6 24-10 44-10s40 4 44 10c-4 6-24 9-44 9s-40-3-44-9z" />
+          <path d="M34 150c14 4 34 4 50 0" />
+          <path d="M80 98l27-21M86 100l26-19" stroke-width="1.8" />
+          <path d="M42 106l3 1M66 109l3-1M54 104l6 2" stroke-width="2.4" />
+
+          <!-- 표준화 화살표 -->
+          <path d="M118 120c18-14 42-16 62-2" stroke-width="1.8" />
+          <path d="M171 110l10 9-12 3" stroke-width="1.8" />
+
+          <!-- 2. 실험실: 플라스크 + 비커 -->
+          <path d="M211 52h22M216 53v35l-24 47c-4 10 1 12 8 12h45c8 0 12-3 8-12l-24-47V53" />
+          <path d="M217 128a2.4 2.4 0 1 0 0.1 0M230 135a2 2 0 1 0 0.1 0M222 106a1.8 1.8 0 1 0 0.1 0" stroke-width="1.6" />
+          <path d="M266 104h30v38c0 3-2 5-5 5h-21c-3 0-4-2-4-5z" />
+          <path d="M266 104l-5-5" />
+          <path d="M287 113h9M290 121h6M287 129h9" stroke-width="1.4" />
+
+          <!-- 스케일업 화살표 -->
+          <path d="M310 120c20-15 46-16 68-2" stroke-width="1.8" />
+          <path d="M369 110l10 9-12 3" stroke-width="1.8" />
+
+          <!-- 3. 공장: 지붕 + 굴뚝 연기 + 컨베이어 -->
+          <path d="M428 98V64l22-14v14l22-14v14l22-14v14l22-14v14h14V34h10v64" stroke-width="1.6" opacity="0.6" />
+          <path d="M527 28c-5-6 0-11 6-10 2-6 10-6 13 0" stroke-width="1.4" opacity="0.5" />
+          <path d="M424 141h136M424 149h136M424 141c-4 0-4 8 0 8M560 141c4 0 4 8 0 8" stroke-width="1.6" />
+          <path d="M436 149v11M548 149v11" />
         </g>
-        <g stroke="currentColor" stroke-width="1" marker-start="url(#bp-arrow)" marker-end="url(#bp-arrow)">
-          <line x1="86" y1="30" x2="164" y2="30" />
-          <line x1="192" y1="44" x2="192" y2="168" />
+
+        <!-- 병 세 개 (살짝씩 기울어지게) -->
+        <g filter="url(#hand)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+          <g transform="rotate(-3 451 124)">
+            <rect x="441" y="104" width="20" height="6" rx="2" fill="currentColor" />
+            <rect x="438" y="110" width="26" height="30" rx="6" style="fill: var(--card)" />
+            <rect x="441" y="119" width="20" height="18" rx="3" fill="#c2562f" stroke="none" opacity="0.75" />
+            <rect x="438" y="122" width="26" height="8" style="fill: var(--bg)" stroke-width="1.3" />
+          </g>
+          <g transform="rotate(2 491 124)">
+            <rect x="481" y="104" width="20" height="6" rx="2" fill="currentColor" />
+            <rect x="478" y="110" width="26" height="30" rx="6" style="fill: var(--card)" />
+            <rect x="481" y="119" width="20" height="18" rx="3" fill="#c2562f" stroke="none" opacity="0.75" />
+            <rect x="478" y="122" width="26" height="8" style="fill: var(--bg)" stroke-width="1.3" />
+          </g>
+          <g transform="rotate(-1 531 124)">
+            <rect x="521" y="104" width="20" height="6" rx="2" fill="currentColor" />
+            <rect x="518" y="110" width="26" height="30" rx="6" style="fill: var(--card)" />
+            <rect x="521" y="119" width="20" height="18" rx="3" fill="#c2562f" stroke="none" opacity="0.75" />
+            <rect x="518" y="122" width="26" height="8" style="fill: var(--bg)" stroke-width="1.3" />
+          </g>
         </g>
-        <g stroke="currentColor" stroke-width="0.8" fill="none">
-          <path d="M90 117H58l-6 -6" />
-          <path d="M100 47H58l-6 6" />
-        </g>
-        <g fill="currentColor" font-size="10" font-weight="800" letter-spacing="0.06em">
-          <text x="125" y="23" text-anchor="middle">Ø 86</text>
-          <text x="200" y="110">H 132</text>
-          <text x="14" y="113">라벨</text>
-          <text x="14" y="58">뚜껑</text>
-        </g>
-        <g fill="none" stroke="currentColor" stroke-width="1">
-          <rect x="176" y="182" width="72" height="18" rx="3" />
-        </g>
-        <text x="212" y="194.5" fill="currentColor" font-size="8.5" font-weight="800" text-anchor="middle" letter-spacing="0.08em">HFL · 배합 설계</text>
+
+        <!-- 글자 -->
+        <text x="58" y="184" text-anchor="middle" class="art-label">비법 요리</text>
+        <text x="58" y="204" text-anchor="middle" class="art-en">SIGNATURE DISH</text>
+        <text x="152" y="98" text-anchor="middle" class="art-en art-step">STANDARDIZE</text>
+        <text x="244" y="184" text-anchor="middle" class="art-label">실험실의 레시피</text>
+        <text x="244" y="204" text-anchor="middle" class="art-en">R&amp;D LAB</text>
+        <text x="344" y="98" text-anchor="middle" class="art-en art-step">SCALE-UP</text>
+        <text x="492" y="184" text-anchor="middle" class="art-label">공장의 제품</text>
+        <text x="492" y="204" text-anchor="middle" class="art-en">MASS PRODUCTION</text>
       </svg>
     </div>
 
-    <div class="steps" aria-label="제품이 되는 과정">
-      <div class="sticker sticker-a">
-        <span class="sticker-label">STEP 01</span>
-        <span class="sticker-big">레시피</span>
-        <span class="sticker-small">매장의 그 맛 그대로</span>
-      </div>
-      <div class="sticker sticker-c">
-        <span class="sticker-label">STEP 02</span>
-        <span class="sticker-big">배합 설계</span>
-        <span class="sticker-small">계량하고 표준화해 시제품까지</span>
-      </div>
-      <div class="sticker sticker-b">
-        <span class="sticker-label">STEP 03</span>
-        <span class="sticker-big">제품</span>
-        <span class="sticker-small">선반 위에 올라가기까지</span>
-      </div>
-    </div>
-
-    <div class="hero-bottom">
-      <div>
-        <p class="headline" data-text="headline"></p>
-        <p class="intro" data-text="intro"></p>
-      </div>
-      <div class="hero-meta">
-        <p class="meta-title" data-text="role"></p>
-        <p class="meta-sub">레시피 제품화 · 1회 자문 · 월 자문</p>
-      </div>
-    </div>
+    <ul class="hero-cards" id="hero-cards"></ul>
   </header>
 
   <main class="panel">
-    <section class="section" id="cases">
-      <p class="kicker">CASES</p>
-      <h2>이렇게 만들었어요</h2>
-      <div class="cards" id="case-list"></div>
+    <section class="section" id="areas">
+      <p class="kicker">CONSULTING</p>
+      <h2>자문 분야</h2>
+      <div class="areas" id="area-list"></div>
+    </section>
+
+    <section class="section" id="results">
+      <p class="kicker">RESULTS</p>
+      <h2>숫자로 보는 성과</h2>
+      <div class="results" id="result-list"></div>
     </section>
 
     <section class="section" id="services">
-      <p class="kicker">SERVICES</p>
-      <h2>할 수 있는 일</h2>
-      <div class="services" id="service-list"></div>
+      <p class="kicker">HOW WE WORK</p>
+      <h2>함께하는 방법</h2>
+      <div class="service-groups" id="service-groups"></div>
+    </section>
+
+    <section class="section" id="menu">
+      <p class="kicker">WHAT WE MAKE</p>
+      <h2>이런 제품을 만들어요</h2>
+      <div class="categories" id="category-list"></div>
+    </section>
+
+    <section class="section" id="career">
+      <p class="kicker">CAREER</p>
+      <h2>걸어온 길</h2>
+      <p class="section-lead" data-text="careerLead"></p>
+      <ol class="timeline" id="career-list"></ol>
+    </section>
+
+    <section class="section" id="values">
+      <p class="kicker">OUR WAY</p>
+      <h2 data-text="valuesTitle"></h2>
+      <div class="values" id="value-list"></div>
+    </section>
+
+    <section class="section" id="notes" hidden>
+      <p class="kicker">WEEKLY NOTE</p>
+      <h2>이번 주 식품 노트</h2>
+      <p class="section-lead">매주 한 번, 꼭 알아야 할 식품 소식을 골라 R&amp;D 관점으로 짚어드려요.</p>
+      <div class="notes" id="note-list"></div>
     </section>
 
     <section class="contact" id="contact">
       <p class="kicker">CONTACT</p>
-      <h2>편하게 연락 주세요</h2>
-      <p class="lead">어떤 제품을 만들고 싶은지 한 줄만 알려주셔도 괜찮아요.</p>
+      <h2 data-text="contactTitle"></h2>
+      <ul class="concerns" id="concern-list"></ul>
+      <p class="lead" data-text="contactLead"></p>
       <div class="contact-buttons">
         <a class="btn btn-kakao" id="btn-kakao" target="_blank" rel="noopener">카카오톡으로 연락하기</a>
         <a class="btn btn-outline" id="btn-email">이메일 보내기</a>
@@ -124,8 +179,8 @@
       <form id="inquiry-form" class="form" novalidate>
         <h3>문의 남기기</h3>
         <label>
-          <span>이름 또는 상호</span>
-          <input name="name" type="text" maxlength="100" required placeholder="예: 오늘반찬 김사장" />
+          <span>이름 또는 회사명</span>
+          <input name="name" type="text" maxlength="100" required placeholder="예: OO식품 김대표" />
         </label>
         <label>
           <span>연락처</span>
@@ -138,8 +193,8 @@
           </select>
         </label>
         <label>
-          <span>어떤 제품을 만들고 싶으세요?</span>
-          <textarea name="description" rows="4" maxlength="2000" required placeholder="예: 매장 깻잎장아찌를 병 제품으로 팔고 싶어요"></textarea>
+          <span>어떤 도움이 필요하세요?</span>
+          <textarea name="description" rows="4" maxlength="2000" required placeholder="예: 냉동만두 신규 라인을 세팅하려고 해요"></textarea>
         </label>
         <input name="website" type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button class="btn btn-primary" type="submit">문의 보내기</button>
