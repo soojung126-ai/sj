@@ -2,8 +2,8 @@
 // 글자를 바꾸고 싶으면 이 파일만 고치면 됩니다. (나중에 어드민이 이 내용을 대신하게 됩니다)
 
 window.SITE = {
-  name: "현푸드랩",
-  nameEn: "HYUN FOOD LAB",
+  name: "푸드비아",
+  nameEn: "FOODVIA",
   role: "식품 R&D 자문",
   headline: "기획에서 출시까지",
   intro: "소스, HMR, 냉동제품\n고령친화식, 저당·건강지향 제품",
@@ -73,10 +73,10 @@ window.SITE = {
     { org: "하림", role: "연구소", did: "", period: "" },
     { org: "삼양식품", role: "연구소", did: "", period: "" },
     { org: "중소기업", role: "R&D 상무", did: "", period: "" },
-    { org: "현푸드랩", role: "식품 R&D 자문 · 교육", did: "", period: "", now: true },
+    { org: "푸드비아", role: "식품 R&D 자문 · 교육", did: "", period: "", now: true },
   ],
 
-  // 현푸드랩이 일하는 방식 (가치)
+  // 푸드비아가 일하는 방식 (가치)
   valuesTitle: "좋은 제품은 지구와 사람에게도 좋아야 하니까",
   values: [
     {
@@ -98,7 +98,7 @@ window.SITE = {
   notes: [],
 
   // 연락하기 섹션
-  contactTitle: "이럴 때, 현푸드랩을 찾아주세요",
+  contactTitle: "이럴 때, 푸드비아를 찾아주세요",
   contactLead: "하나라도 내 얘기 같다면, 지금 상황만 들려주세요.",
   concerns: [
     "신규 라인을 세팅해야 해요",
